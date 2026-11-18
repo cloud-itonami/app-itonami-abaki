@@ -22,7 +22,7 @@ import urllib.request
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY = 'etzhayyim/com-etzhayyim-abaki'
+REPOSITORY = 'itonami/app-itonami-abaki'
 BRANCH = 'abaki-reports'
 
 

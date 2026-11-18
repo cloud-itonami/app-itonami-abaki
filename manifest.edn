@@ -25,13 +25,13 @@
               :generated-policy "out/routing-policy.edn"
               :generated-analysis "out/analysis.edn"}
  :actor/repository-contracts
- [{:id :intel :repository "https://github.com/etzhayyim/com-etzhayyim-intel"
+ [{:id :intel :repository "https://github.cloud/itonami/com-itonami-intel"
    :revision "1032169f79b99e164b91c2ec4b924f7c6261467b" :role :public-osint-source}
-  {:id :suki :repository "https://github.com/etzhayyim/com-etzhayyim-suki"
+  {:id :suki :repository "https://github.cloud/itonami/com-itonami-suki"
    :revision "f01615cb1ffac027403a2fd8e921787a45d7a131" :role :biology-route-around}
-  {:id :wadachi :repository "https://github.com/etzhayyim/com-etzhayyim-wadachi"
+  {:id :wadachi :repository "https://github.cloud/itonami/com-itonami-wadachi"
    :revision "44fb5f545c17ba09ad02da501fac42a63c1124bc" :role :logistics-route-around}
-  {:id :ameno :repository "https://github.com/etzhayyim/com-etzhayyim-ameno"
+  {:id :ameno :repository "https://github.cloud/itonami/com-itonami-ameno"
    :revision "2ca2288013fe8c62b370fef736f60085baec860f" :role :compute-route-around}]
  :actor/retired-assumptions
  [{:id :amenominaka :reason :no-independent-repository-and-no-code-reference}

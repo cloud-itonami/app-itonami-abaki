@@ -20,7 +20,7 @@ The scheduled profile script calls the pinned owner `scripts/live_tick.py` with
 a host-only execution.json specifying `agent_bin`, `publication`, `staging` and
 `state` absolute paths. Use dedicated publication and proposal workspaces under
 the github forest. The publication worktree must use branch `abaki-reports` and
-remote `etzhayyim/com-etzhayyim-abaki`; it cannot carry unrelated WIP.
+remote `itonami/app-itonami-abaki`; it cannot carry unrelated WIP.
 
 The research turn runs through Itonami agent using a staging cwd, only web
 tools, 18 tool calls / 900 seconds requested, and a runtime turn/budget limit.
@@ -37,7 +37,7 @@ only reports, evidence/cases and research-progress.json to `abaki-reports`.
 It never pushes main, force-pushes, merges PRs, or broadcasts a supplier blocklist.
 Publication is a public repository artifact at:
 
-https://github.com/etzhayyim/com-etzhayyim-abaki/tree/abaki-reports/reports
+https://github.com/network-awai/app-itonami-abaki/tree/abaki-reports/reports
 
 The returned immutable commit and key files are independently fetched from
 GitHub and byte-compared. Host receipts record research outcome, source hashes,

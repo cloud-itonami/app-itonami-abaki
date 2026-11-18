@@ -5,7 +5,7 @@ associations and other organizations exercising monopoly, oligopoly or material 
 power, separately for each geographic and relevant product/service market. Publish
 evidence with precise attribution, dates, uncertainty and a correction path.
 
-Use the owning repository `etzhayyim/com-etzhayyim-abaki`. Read README.md and
+Use the owning repository `itonami/app-itonami-abaki`. Read README.md and
 docs/methodology.md, then execute its commands from the repository root. Do not use
 the legacy fictitious `data/seed.edn` or the CI trait score as factual evidence.
 
