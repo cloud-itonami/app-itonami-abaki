@@ -21,7 +21,7 @@
 
 (defn fetch-from-intel
   "Mock integration with the `intel` actor's OSINT pipeline. In a real implementation this
-  would call intel.etzhayyim.com/xrpc/etzhayyim.intel.v1.QueryEntityGraph or subscribe to its
+  would call intel.itonami.cloud/xrpc/itonami.intel.v1.QueryEntityGraph or subscribe to its
   datom log to find monopolistic indicators (M&A, patents, licensing changes). Returns a vector
   of string-keyed intel records — byte-for-byte the shapes Python's list-of-dicts produced."
   []

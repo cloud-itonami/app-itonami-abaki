@@ -16,7 +16,7 @@
 ;; A fully-presented member-signed capability (the autonomous loop PRESENTS this; it never holds
 ;; a key). operator flag in env + operator attestation + Council Lv6 + a real member signature.
 (def member-gate
-  (lg/make-live-gate {:operator-did "did:web:etzhayyim.com:operator:1"
+  (lg/make-live-gate {:operator-did "did:web:itonami.cloud:operator:1"
                       :council-level 6
                       :member-signature "sig:member:abel:ed25519:deadbeef"}))
 (def allow-env {"ABAKI_ALLOW_LIVE_PUBLISH" "1"})
@@ -30,7 +30,7 @@
     (is (= "entity:compute:megacorp_a" (:db/id (first datoms))))
     (is (= :non-aligned (:abaki/status (first datoms))))
     (is (= 100 (:abaki/ci-score (first datoms))))
-    (is (= "did:web:etzhayyim.com:operator:1" (:abaki/attested-by (first datoms))))))
+    (is (= "did:web:itonami.cloud:operator:1" (:abaki/attested-by (first datoms))))))
 
 ;; The gate REFUSES by default (no-server-key / outward-gating). A bare gate is NOT admissible
 ;; and `require-gate` raises; only the fully-presented member capability admits.
@@ -41,7 +41,7 @@
     ;; even with the operator flag, a bare gate (no attestation / council / member sig) refuses
     (is (false? (get (lg/gate-status bare allow-env) "admissible")))
     ;; a synthetic server-held signature is refused as a signer
-    (let [synthetic (lg/make-live-gate {:operator-did "did:web:etzhayyim.com:actor:abaki:autonomous"
+    (let [synthetic (lg/make-live-gate {:operator-did "did:web:itonami.cloud:actor:abaki:autonomous"
                                         :council-level 6
                                         :member-signature "autonomous_system_signature"})]
       (is (false? (get (lg/gate-status synthetic allow-env) "admissible")))
@@ -60,7 +60,7 @@
     ;; member capability → emits, attested by the presenting member/operator DID
     (let [datoms (a/publish-live routing-policy member-gate allow-env)]
       (is (= 2 (count datoms)))
-      (is (every? #(= "did:web:etzhayyim.com:operator:1" (:abaki/attested-by %)) datoms)))))
+      (is (every? #(= "did:web:itonami.cloud:operator:1" (:abaki/attested-by %)) datoms)))))
 
 ;; empty / missing blocked_entities → no Datoms even with a fully-admitting gate
 ;; (route-around emits nothing to route around).

@@ -5,6 +5,6 @@
   [{:name "abaki"
     :src "src/abaki/methods/mesh.cljk"
     :scale 1
-    :triggers [{:type :kse :topic "etzhayyim/actor/abaki"}]
+    :triggers [{:type :kse :topic "itonami/actor/abaki"}]
     :requires #{:cap/kqe}}]
   :kotoba.app/placement {:spread :zone :require {:tier "edge"}}}]
